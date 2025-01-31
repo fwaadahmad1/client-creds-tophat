@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "8a600b1d3a67c4280c304d6a78caaf6a"
+application_url = "https://fairfield-automobiles-refined-assists.trycloudflare.com"
+embedded = true
+name = "api-js-tophat"
+handle = "api-js-tophat"
+
+[build]
+include_config_on_deploy = true
+dev_store_url = "development-store-1.shopify.fa-jan28.fwaad-ahmad.us.spin.dev"
+automatically_update_urls_on_dev = true
+
+[webhooks]
+api_version = "2025-01"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products,read_products"
+
+[auth]
+redirect_urls = [
+  "https://fairfield-automobiles-refined-assists.trycloudflare.com/auth/callback",
+  "https://fairfield-automobiles-refined-assists.trycloudflare.com/auth/shopify/callback",
+  "https://fairfield-automobiles-refined-assists.trycloudflare.com/api/auth/callback"
+]
+
+[pos]
+embedded = false
